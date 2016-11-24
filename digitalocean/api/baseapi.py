@@ -3,7 +3,10 @@
 from __future__ import unicode_literals
 
 import json
-from urlparse import urljoin
+try:
+    from urlparse import urljoin
+except:
+    from urllib.parse import urljoin
 
 import requests
 from digitalocean.api.exceptions import (
